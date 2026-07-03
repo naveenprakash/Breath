@@ -1,8 +1,10 @@
 # Breath
 
 
-Privacy Policy
+##Privacy Policy
+
 Effective Date: 03/07/2026, 08:12:28
+
 Introduction and organizational info
 We, at Kosai, are dedicated to serving our customers and contacts to the best of our abilities. Part of our commitment involves the responsible management of personal information collected through our website breath.github.com, and any related interactions. Our primary goals in processing this information include:
 Enhancing the user experience on our platform by understanding customer needs and preferences.
@@ -86,5 +88,3 @@ Reviewing changes: We encourage you to review our privacy policy periodically to
 Contact us
 If you have any questions or concerns about our privacy policy or any updates to it, please don’t hesitate to contact us at naveenprakash.h@gmail.com or +91 9962242112. We are here to address any inquiries you may have and to ensure that you have the information you need to feel confident about how your personal information is handled.
 
-Powered by Usercentrics
-Generate Yours
