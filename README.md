@@ -17,7 +17,7 @@ Your privacy is our priority. We are committed to processing your personal infor
 Scope and application
 Our privacy policy is designed to protect the personal information of all our stakeholders, including website visitors, registered users, and customers. Whether you are just browsing our website breath.github.com, using our services as a registered user, or engaging with us as a valued customer, we ensure that your personal data is processed with the highest standards of privacy and security. This policy outlines our practices and your rights related to personal information.
 Data storage and protection
-Data storage
+## Data storage
 Personal information is stored in secure servers located in the following locations: . For services that require international data transfer, we ensure that such transfers comply with all applicable laws and maintain data protection standards equivalent to those in our primary location.
 Data hosting partners: We partner with reputable data hosting providers committed to using state-of-the-art security measures. These partners are selected based on their adherence to stringent data protection standards.
 Data processing agreements
@@ -25,7 +25,7 @@ When we share your data with third-party service providers, we do so under the p
 Transparency and control
 We believe in transparency and providing you with control over your personal information. You will always be informed about any significant changes to our sharing practices, and where applicable, you will have the option to consent to such changes.
 Your trust is important to us, and we strive to ensure that your personal information is disclosed only in accordance with this policy and when there is a justified reason to do so. For any queries or concerns about how we share and disclose personal information, please reach out to us at naveenprakash.h@gmail.com or +91 9962242112.
-User rights and choices
+## User rights and choices
 At Kosai, we recognize and respect your rights regarding your personal information, in accordance with the General Data Protection Regulation (GDPR) and other applicable data protection laws. We are committed to ensuring you can exercise your rights effectively. Below is an overview of your rights and how you can exercise them:
 Your rights
 Right of access (Art. 15 GDPR): You have the right to request access to the personal information we hold about you and to obtain information about how we process it.
