@@ -1,0 +1,142 @@
+/* Custom Variables & Global Enhancements */
+:root {
+  color-scheme: dark;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #121520;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2538;
+  border-radius: 9999px;
+  border: 2.5px solid #121520;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38DEC2;
+}
+
+/* Smooth Focus Indicators (WCAG Compliant) */
+*:focus-visible {
+  outline: 2px solid #38DEC2;
+  outline-offset: 4px;
+}
+
+/* Active State for Navigation Links */
+.nav-link.active-link {
+  color: #38DEC2 !important;
+  position: relative;
+}
+.nav-link.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #38DEC2;
+  border-radius: 2px;
+}
+
+/* Single-Page Application (SPA) Views Optimization */
+.spa-view {
+  transition: opacity 0.3s ease;
+}
+
+/* Fast SPA View Switching with State Caching */
+.spa-view.inactive {
+  /* Cache the rendering state of inactive views */
+  content-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Fallback for older browsers that do not support content-visibility */
+@supports not (content-visibility: hidden) {
+  .spa-view.inactive {
+    display: none !important;
+  }
+}
+
+/* View Transitions Keyframes & Configurations */
+@keyframes slide-to-left {
+  to { transform: translateX(-40px); opacity: 0; }
+}
+
+@keyframes slide-from-right {
+  from { transform: translateX(40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-to-right {
+  to { transform: translateX(40px); opacity: 0; }
+}
+
+@keyframes slide-from-left {
+  from { transform: translateX(-40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+::view-transition-group(root) {
+  animation: 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Forward transition (Home -> Privacy) */
+html:active-view-transition-type(forward)::view-transition-old(root) {
+  animation-name: slide-to-left;
+}
+html:active-view-transition-type(forward)::view-transition-new(root) {
+  animation-name: slide-from-right;
+}
+
+/* Backward transition (Privacy -> Home) */
+html:active-view-transition-type(backward)::view-transition-old(root) {
+  animation-name: slide-to-right;
+}
+html:active-view-transition-type(backward)::view-transition-new(root) {
+  animation-name: slide-from-left;
+}
+
+/* Respect user preferences for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(root) {
+    animation: none !important;
+  }
+  .spa-view {
+    transition: none !important;
+  }
+  .animate-fade-in,
+  .animate-slide-up {
+    animation: none !important;
+  }
+}
+
+/* Custom Animation Utility Classes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0; /* starts invisible, animated in */
+}
+
+/* Device screen slide transitions for manual/auto slider */
+#carousel-slides {
+  will-change: transform;
+}
